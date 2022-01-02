@@ -1,0 +1,15 @@
+version: '2'
+services:
+  quasar:
+    container_name: reactapp
+    build:
+      context: ./dashboard/
+    ports:
+      - '8080:3000'
+  backend:
+    container_name: servercont
+    build:
+      context: ./server/
+    image: serverimg
+    ports:
+      - '8081:8081'

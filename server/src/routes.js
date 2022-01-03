@@ -78,7 +78,7 @@ module.exports = function(app) {
             password: req.body.password,
         })
         if (userProfile.error != undefined) {
-            res.send(user);
+            res.send(userProfile);
             return;
         }
         res.redirect('/signin')

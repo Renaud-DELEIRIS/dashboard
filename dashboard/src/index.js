@@ -17,12 +17,11 @@ import {
 const HandleRegistery = () => {
   const [data, setData] = React.useState(null);
 
-
-
-
   const isAuth = async () => {
-    if (window.localStorage.token === undefined)
+    if (window.localStorage.token === undefined) {
+      setData({"getUser": null})
       return;
+    }
     console.log(window.localStorage.token)
     const requestOptions = {
         method: 'POST',

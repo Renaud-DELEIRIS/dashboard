@@ -49,7 +49,7 @@ export default memo((nodeData) => {
         })
     };
     let result
-    await fetch('http://localhost:8081/graphql', requestOptions)
+    await fetch('https://193.70.2.77:8081/graphql', requestOptions)
         .then(response => response.json())
         .then(data => result = data);
         setToken(result.data.getUser.spotifyToken);

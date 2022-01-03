@@ -36,7 +36,7 @@ export default function SignUp() {
             lastName: data.get('lastName')
           })
     };
-    await fetch('http://localhost:8081/auth/vanilla/signup', requestOptions)
+    await fetch('https://193.70.2.77:8081/auth/vanilla/signup', requestOptions)
         .then(response => response.json())
         .then(data => result = data);
     if (result.success !== undefined) {

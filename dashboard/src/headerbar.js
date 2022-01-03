@@ -71,7 +71,7 @@ const HeaderBar = () => {
           token: res.access_token
         })
       };
-      await fetch('http://localhost:8081/auth/spotify', requestOptions)
+      await fetch('https://193.70.2.77:8081/auth/spotify', requestOptions)
           .then(response => response.json())
           .then(data => result = data);
       if (result !== undefined) {

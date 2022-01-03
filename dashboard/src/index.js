@@ -42,7 +42,7 @@ const HandleRegistery = () => {
           }`
         })
     };
-    await fetch('http://localhost:8081/graphql', requestOptions)
+    await fetch('https://193.70.2.77:8081/graphql', requestOptions)
         .then(response => response.json())
         .then(data => setData(data.data));
         console.log(data);
@@ -87,7 +87,7 @@ const Logout = () => {
             'Authorization': window.localStorage.token,
         }
     };
-    await fetch('http://localhost:8081/logout', requestOptions)
+    await fetch('https://193.70.2.77:8081/logout', requestOptions)
         .then(response => response.json())
         .then(data => setData(data))
         window.localStorage.token = undefined;

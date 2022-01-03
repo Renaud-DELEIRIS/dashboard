@@ -36,7 +36,7 @@ export default function SignIn() {
             password: data.get('password')
           })
     };
-    await fetch('http://localhost:8081/auth/vanilla/signin', requestOptions)
+    await fetch('https://193.70.2.77:8081/auth/vanilla/signin', requestOptions)
         .then(response => response.json())
         .then(data => result = data);
     if (result.success !== undefined) {
@@ -56,7 +56,7 @@ export default function SignIn() {
           'Bearer': res.tokenId,
       },
     };
-    await fetch('http://localhost:8081/auth/google', requestOptions)
+    await fetch('https://193.70.2.77:8081/auth/google', requestOptions)
         .then(response => response.json())
         .then(data => result = data);
     if (result.success !== undefined) {
@@ -78,7 +78,7 @@ export default function SignIn() {
           'Bearer': res.access_token  ,
       },
     };
-    await fetch('http://localhost:8081/user/spotify', requestOptions)
+    await fetch('https://193.70.2.77:8081/user/spotify', requestOptions)
         .then(response => response.json())
         .then(data => result = data);
     if (result.success !== undefined) {

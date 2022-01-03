@@ -47,7 +47,7 @@ export default memo((nodeData) => {
   const handleToClose = async () => {
     let result;
     console.log(query)
-    await fetch('http://localhost:8081/graphql', {
+    await fetch('https://193.70.2.77:8081/graphql', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query: `
